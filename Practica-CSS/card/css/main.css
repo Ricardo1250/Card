@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Font-size: 15px;
+    font-family: sans-serif;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.contenedor {
+    display: flex;
+    background-color: hsl(244, 38%, 16%);
+    width: 100%;
+    min-width: 320px;
+    max-width: 1440px;
+}
+
+.info {
+    padding: 3rem 6rem 3rem 3rem;
+    color: white;
+    flex-basis: 50%;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.titulo span {
+    color: hsl(277, 64%, 61%);
+}
+
+.descripcion {
+    color: lightgray;
+    font-size: 1rem;
+}
+
+.caracteristicas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.char {
+    font-size: 1.5;
+    margin-bottom: 0;
+}
+
+.char span {
+    display: block;
+    font-weight: lighter;
+    font-size: 1rem;
+    margin-top: .7rem;
+}
+
+.img {
+    flex-basis: 50%;
+    background-image: url(../images/image-header-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 93%, 23%, 0.733);
+}
+
+@media screen and ( max-width: 768px) {
+    .contenedor {
+        flex-direction: column-reverse;
+        height: 90%;
+    }
+    .contenedor .info {
+        height: 75%;
+        text-align: center;
+        padding: 2rem;
+    }
+    .titulo {
+        font-size: 1.5rem;
+    }
+    .char span {
+        margin-top: 0;
+    }
+    .caracteristicas {
+        flex-direction: column;
+    }
+    .char {
+        font-size: 1rem;
+    }
+    .char span {
+        font-size: 0.8rem;
+    }
+}
